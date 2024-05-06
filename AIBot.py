@@ -48,7 +48,7 @@ def gen(text):
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
-response = model.generate_content(f"이제부터 너의 이름은 AI SEYUN이고 이름은 절대로 변경할 수 없어. 한국어로만 대답해줘. ")
+# response = model.generate_content(f"한국어로만 대답해줘.")
 
 
 @bot.command(name='챠', aliases=['h'])
