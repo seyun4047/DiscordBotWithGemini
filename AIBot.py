@@ -43,11 +43,13 @@ def main():
 
 # ---------------------------------------------
 def gen(text):
-    response = model.generate_content(f"{text}")
+    # response = model.generate_content(f"{text}")
+    response = chat.send_message(f"{text}")
     return response.text
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
+chat = model.start_chat(history=[])
 # response = model.generate_content(f"한국어로만 대답해줘.")
 
 
